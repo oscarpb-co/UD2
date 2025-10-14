@@ -2,7 +2,7 @@ package javaapplication7;
 
 import java.util.Scanner;
 
-public class Ejercicio04_2_2 {
+public class Ejercicio05_2_2 {
 
     public static void main(String[] args) {
        int precio = 2;
