@@ -17,36 +17,29 @@ public class Ejercicio16_2_2 {
         Scanner innn = new Scanner(System.in);
         System.out.println("Dime el valor de c");
         int c = innn.nextInt();
-        
+
         double d = Math.pow(b, 2) - (4 * a * c);
-        double x = 1;
+
+        double imaginarioPos = (-b + Math.sqrt(d)) / (2 * a);
+        double imaginarioNeg = (-b - Math.sqrt(d)) / (2 * a);
+
+        double x = -c / b;
 
         double parteReal = -b / (2 * a);
-        double imaginarioPos = +Math.sqrt(-d) / (2 * a);
-        double imaginarioNeg = -Math.sqrt(-d) / (2 * a);
-
-        double solucion = b * x + c;
+        double parteImaginaria = Math.sqrt(-d) / (2 * a);
 
         if (a == 0) {
-            System.out.println("Solo hay una solucion");
-            System.out.println(solucion);
-        } 
-         else if (d < 0) {
-                System.out.println("X es: " + (parteReal + imaginarioPos));
-        } 
-        else {
-            System.out.println("X es: " + (parteReal + imaginarioPos));
-            System.out.println("X es tambien: " + (parteReal + imaginarioNeg));
-        }        
-                
-                
-                
-                
-                
-                
-                
-                
-        
+            System.out.println("X es: " + x);
+
+        } else if (d < 0) {
+            System.out.println("X es:" + parteReal + " + " + parteImaginaria + "i");
+            System.out.println("X es tambien: " + parteReal + " - "
+                    + parteImaginaria + "i");
+        } else {
+            System.out.println("X es: " + imaginarioPos);
+            System.out.println("X es tambien: " + imaginarioNeg);
+        }
+
     }
 
 }
